@@ -31,3 +31,8 @@ Gegen Ende begann ich, mich speziell mit der Logik von Audio zu beschäftigen - 
 ## Reflexion
 
 ...
+
+
+Timecodes
+#1 - 7:58
+#2 - 5:50
