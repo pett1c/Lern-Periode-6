@@ -25,15 +25,20 @@ Gegen Ende begann ich, mich speziell mit der Logik von Audio zu beschäftigen - 
 ## 06.09
 - [x] Theoretische Berechnung eines geeigneten Frequenzspektrums auf der Grundlage von Audio
 - [x] Praktische Berechnung eines geeigneten Frequenzspektrums auf der Grundlage von Audiodaten (schreiben einen Code dafür)
-- [ ] Binden die neu erstellte Klasse an das Hauptprojekt
-- [ ] Weiterschreiben des Hauptcodes
 Heute war kein sehr produktiver Tag, denn mein Internet war unterbrochen und ich musste mein mobiles Internet nutzen, um arbeiten zu können. Aber am Ende habe ich es geschafft, wie erwartet zwei Arbeitspakete fertigzustellen, in denen ich die Logik für die Berechnung von Frequenzen und deren weitere Verwendung geschrieben habe.
 
 ## 13.09
-- [ ] Binden die neu erstellte Klasse an das Hauptprojekt
-- [ ] Schreiben der Logik der Objektbewegung
-- [ ] Schreiben von Glüh- und Farblogik für Objekte
-- [ ] Weiterschreiben des Hauptcodes
+- [x] Schreiben einer Methode zur Ermittlung der durchschnittlichen Amplitude
+- [x] Schreiben einer Methode für ein Audioprofil
+- [x] Schreiben einer Methode zur Erzeugung von Stereo- statt Monoton
+- [x] Schreiben einer Methode für 64 Audiobänder
+Heute war ein äusserst produktiver Tag, dank dem ich die Hauptklasse des gesamten Projekts – AudioPeer – schnell und erfolgreich abgeschlossen habe. Heute habe ich die Berechnung der durchschnittlichen Amplitude, des Audioprofils, des Stereo- statt Mono-Tons sowie weiterer 64 Audiobänder abgeschlossen. Jetzt habe ich nur noch sehr wenig Zeit und kann mich an schönen und ansprechenden Musikvisualisierungen erfreuen.
+
+## 20.09
+- [ ] Hinzufügen von Methoden aus der AudioPeer-Klasse zur Hauptcodedatei.
+- [ ] Implementierung der Ballbewegungslogik
+- [ ] Reaktionsfähigkeit der Musik beim Schreiben von Bällen
+- [ ] Kosmetische Änderungen und Ergänzungen (Shader usw.)
 
 ## Reflexion
 
