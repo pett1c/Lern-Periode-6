@@ -67,6 +67,9 @@ public class AtomicAttraction : MonoBehaviour
         _audioBandEmissionColor = new float[8];
         _audioBandScale = new float[8];
 
+        _sharedMaterial = new Material[8];
+        _sharedColor = new Color[8];
+
         int _countAtom = 0;
         //instantiate attract points
         for (int i = 0; i < _attractPoints.Length; i++)
@@ -81,6 +84,11 @@ public class AtomicAttraction : MonoBehaviour
 
             _attractorInstance.transform.parent = this.transform;
             _attractorInstance.transform.localScale = new Vector3(_scaleAttractPoints, _scaleAttractPoints, _scaleAttractPoints);
+
+            //set colors to material
+            Material _matInstance = new Material(_material);
+            _sharedMaterial[i] = _matInstance;
+            _sharedColor[i] = _gradient.Evaluate(0.125f * i);
 
             //instantiate atoms
             for (int j = 0; j < _amountOfAtomsPerPoint; j++)
@@ -109,6 +117,8 @@ public class AtomicAttraction : MonoBehaviour
                 _atomInstance.transform.localScale = new Vector3(_atomScaleSet[_countAtom], _atomScaleSet[_countAtom], _atomScaleSet[_countAtom]);
 
                 _atomInstance.transform.parent = transform.parent.transform;
+                _atomInstance.GetComponent<MeshRenderer>().material = _sharedMaterial[i];
+
                 _countAtom++;
             }
 
@@ -120,19 +130,90 @@ public class AtomicAttraction : MonoBehaviour
     void Update()
     {
         SelectAudioValues();
+        AtomBehaviour();
+    }
+
+    void AtomBehaviour()
+    {
+        int countAtom = 0;
+
+        for (int i = 0; i < _attractPoints.Length; i++)
+        {
+            if (_audioBandEmissionTreshold[_attractPoints[i]] >= _tresholdEmission)
+            {
+                Color _audioColor = new Color(
+                    _sharedColor[i].r * _audioBandEmissionColor[_attractPoints[i]] * _audioEmissionMultiplier,
+                    _sharedColor[i].g * _audioBandEmissionColor[_attractPoints[i]] * _audioEmissionMultiplier,
+                    _sharedColor[i].b * _audioBandEmissionColor[_attractPoints[i]] * _audioEmissionMultiplier, 1);
+                _sharedMaterial[i].SetColor("_EmissionColor", _audioColor);
+            }
+            else
+            {
+                Color _audioColor = new Color(0,0,0,1);
+                _sharedMaterial[i].SetColor("_EmissionColor", _audioColor);
+            }
+
+
+            for (int j = 0; j < _amountOfAtomsPerPoint; j++)
+            {
+                _atomArray[countAtom].transform.localScale = new Vector3(
+                    _atomScaleSet[countAtom] + _audioBandScale[_attractPoints[i]] * _audioScaleMultiplier,
+                    _atomScaleSet[countAtom] + _audioBandScale[_attractPoints[i]] * _audioScaleMultiplier,
+                    _atomScaleSet[countAtom] + _audioBandScale[_attractPoints[i]] * _audioScaleMultiplier
+                    );
+                countAtom++;
+            }
+        }
     }
 
     void SelectAudioValues()
     {
+        //treshold
         if (emissionTreshold == _emissionTreshold.Buffered)
         {
             for (int i = 0; i < 8; i++)
             {
+                _audioBandEmissionTreshold[i] = AudioPeer._audioBandBuffer[i];
             }
         }
         if (emissionTreshold == _emissionTreshold.NoBuffer)
         {
+            for (int i = 0; i < 8; i++)
+            {
+                _audioBandEmissionTreshold[i] = AudioPeer._audioBand[i];
+            }
+        }
 
+        //emission color
+        if (emissionColor == _emissionColor.Buffered)
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                _audioBandEmissionColor[i] = AudioPeer._audioBandBuffer[i];
+            }
+        }
+        if (emissionColor == _emissionColor.NoBuffer)
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                _audioBandEmissionColor[i] = AudioPeer._audioBand[i];
+            }
+        }
+
+        //atom scale
+        if (atomScale == _atomScale.Buffered)
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                _audioBandScale[i] = AudioPeer._audioBandBuffer[i];
+            }
+        }
+        if (atomScale == _atomScale.NoBuffer)
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                _audioBandScale[i] = AudioPeer._audioBand[i];
+            }
         }
     }
 }

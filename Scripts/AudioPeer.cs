@@ -23,12 +23,11 @@ public class AudioPeer : MonoBehaviour
     private float[] _freqBandHighest64 = new float[64];
 
 
-    [HideInInspector]
-    public float[] _audioBand, _audioBandBuffer;
+    public static float[] _audioBand, _audioBandBuffer;
 
     //audio64
     [HideInInspector]
-    public float[] _audioBand64, _audioBandBuffer64;
+    public static float[] _audioBand64, _audioBandBuffer64;
 
 
     [HideInInspector]
@@ -44,8 +43,8 @@ public class AudioPeer : MonoBehaviour
     {
         _audioBand = new float[8];
         _audioBandBuffer = new float[8];
-        _audioBand64 = new float[8];
-        _audioBandBuffer64 = new float[8];
+        _audioBand64 = new float[64];
+        _audioBandBuffer64 = new float[64];
 
         _audioSource = GetComponent<AudioSource>();
         AudioProfile(_audioProfile);
@@ -139,7 +138,7 @@ public class AudioPeer : MonoBehaviour
 
     void BandBuffer64()
     {
-        for (int g = 0; g < 8; g++)
+        for (int g = 0; g < 64; g++)
         {
             if (_freqBand64[g] > _bandBuffer64[g])
             {
