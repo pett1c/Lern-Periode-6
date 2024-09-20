@@ -35,10 +35,21 @@ Heute war kein sehr produktiver Tag, denn mein Internet war unterbrochen und ich
 Heute war ein äusserst produktiver Tag, dank dem ich die Hauptklasse des gesamten Projekts – AudioPeer – schnell und erfolgreich abgeschlossen habe. Heute habe ich die Berechnung der durchschnittlichen Amplitude, des Audioprofils, des Stereo- statt Mono-Tons sowie weiterer 64 Audiobänder abgeschlossen. Jetzt habe ich nur noch sehr wenig Zeit und kann mich an schönen und ansprechenden Musikvisualisierungen erfreuen.
 
 ## 20.09
-- [ ] Hinzufügen von Methoden aus der AudioPeer-Klasse zur Hauptcodedatei.
-- [ ] Implementierung der Ballbewegungslogik
-- [ ] Reaktionsfähigkeit der Musik beim Schreiben von Bällen
+- [x] Hinzufügen von Methoden aus der AudioPeer-Klasse zur Hauptcodedatei.
+- [x] Implementierung der Ballbewegungslogik
+- [x] Reaktionsfähigkeit der Musik beim Schreiben von Bällen
 - [ ] Kosmetische Änderungen und Ergänzungen (Shader usw.)
+Heute war ein ziemlich effizienter Tag, ich konnte das erledigen, was ich zu erledigen hatte. Es gibt nur ein Problem.
+
+Ich habe also weiter an dem Hauptcode gearbeitet, der für die Erstellung und Bewegung der Kugeln verantwortlich ist, die die Musik visualisieren. Schließlich konnte ich die AudioPeer-Klasse einbinden, aber leider bin ich auf zwei Fehler gestoßen, für deren Behebung ich etwa zwei Stunden gebraucht habe. Der erste Fehler war ein „Array-Exit“-Fehler, den ich beim Schreiben eines der for-Zyklen machte. Und der zweite Fehler war, dass ich vergessen hatte, „static“ für einige Variablen anzugeben, was den Fehler verursachte.
+Am Ende habe ich die Fehler behoben und die Visualisierung läuft, allerdings vorerst ohne Shader. Leider war das Ergebnis ekelerregend. Das war ganz und gar nicht das Ergebnis, das ich erwartet hatte, und am Ende beschloss ich, es am Ende von LernPeriode 6 selbst zu beheben, da ich bereits den grundlegenden Code für die Musikvisualisierungslogik habe und alles, was noch übrig ist, ist die Visualisierung selbst.
+
+Ich habe einfach anfangs eine zu komplizierte Visualisierung genommen, die ich am Ende nicht hinbekommen habe, also habe ich beschlossen, eine einfachere zu machen, mit der gleichen Logik für die Visualisierung selbst, die ich schon habe.
+
+## 27.09
+- [ ] Wählen die Art der Visualisierung
+- [ ] Code zum Erstellen von Objekten (Prefabs) schreiben
+- [ ] Schreiben Code, um Musik zu visualisieren.
 
 ## Reflexion
 
