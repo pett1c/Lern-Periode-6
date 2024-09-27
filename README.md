@@ -6,6 +6,7 @@
 a little audio track visualizer.
 created with blood and sweat.
 basic information was taken from Peer Play's tutorials.
+![github_visualisation](https://github.com/user-attachments/assets/fb474396-7af8-48b9-ba1c-af2d81bb88e2)
 - https://youtu.be/pxsvwGzfbiQ
 
 ## 23.08
