@@ -6,7 +6,7 @@
 a little audio track visualizer.
 created with blood and sweat.
 basic information was taken from Peer Play's tutorials.
-https://youtu.be/pxsvwGzfbiQ
+- https://youtu.be/pxsvwGzfbiQ
 
 ## 23.08
 - [x] Auswahl einer Programmiersprache (JavaScript / C#).
