@@ -2,8 +2,10 @@
 # Ihor Tienietilov
 # 16.08.2024 bis 27.09.2024
 
-## Grob-Planung
-Ich möchte einen unendlichen Musikvisualisierer auf Basis von C# und wahrscheinlich Unity erstellen. 
+## fertiges Projekt
+a little audio track visualizer.
+created with blood and sweat.
+basic information was taken from Peer Play's tutorials.
 
 ## 23.08
 - [x] Auswahl einer Programmiersprache (JavaScript / C#).
@@ -47,15 +49,14 @@ Am Ende habe ich die Fehler behoben und die Visualisierung läuft, allerdings vo
 Ich habe einfach anfangs eine zu komplizierte Visualisierung genommen, die ich am Ende nicht hinbekommen habe, also habe ich beschlossen, eine einfachere zu machen, mit der gleichen Logik für die Visualisierung selbst, die ich schon habe.
 
 ## 27.09
-- [ ] Wählen die Art der Visualisierung
-- [ ] Code zum Erstellen von Objekten (Prefabs) schreiben
-- [ ] Schreiben Code, um Musik zu visualisieren.
+- [x] Wählen die Art der Visualisierung
+- [x] Code zum Erstellen von Objekten (Prefabs) schreiben
+- [x] Schreiben Code, um Musik zu visualisieren.
+Heute war ein extrem effizienter und schneller Tag - ich habe erfolgreich und ohne grosse Schwierigkeiten eine leichtere Version des Visualisierungsprojekts erstellt, indem ich 64 reguläre Würfel als Basis genommen und ein paar Zeilen Code geschrieben habe, um sie von der AudioPeer-Klasse abhängig zu machen. Kurz gesagt, die Skala jedes Würfels ändert sich im Verhältnis zu dem entsprechenden Band.
 
 ## Reflexion
+Dies war ein äusserst interessantes Projekt für mich.
 
-...
+Erstens habe ich Unity3D entdeckt. Davor hatte ich ausschliesslich mit Unity2D gearbeitet. Ausserdem weiss ich jetzt viel, viel mehr darüber, woraus Sound eigentlich besteht, was mir sogar beim direkten Erstellen von Musik helfen kann. Ausserdem bin ich mit dem Programmieren trivialerweise wieder auf dem gleichen Stand wie früher und habe schon eine Idee für mein nächstes Projekt.
 
-
-Timecodes
-#1 - 7:58
-#2 - 5:50
+Der Entstehungsprozess selbst war extrem schwierig und mühsam, weil ich mir anfangs eine Aufgabe gestellt habe, die für mich unmöglich war (und wie immer habe ich alles im letzten Moment geändert), aber trotz der enormen Dumpfheit, die überall herrschte, habe ich gelernt, mit komplexem Code leichter umzugehen, den man verstehen muss und nicht nur lesen kann.
